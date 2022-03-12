@@ -54,6 +54,10 @@ http://localhost:8080/q/swagger-ui/
 quarkus ext add smallrye-health
 -- show, stop docker
 
+Kafka
 
+- resteasy-reactive-jackson, smallrye-reactive-messaging-kafka
+mp.messaging.incoming.msg-in.topic=messages
+mp.messaging.outgoing.msg-out.topic=messages
 
 
