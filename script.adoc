@@ -1,0 +1,59 @@
+code.quarkus
+
+$ brew install quarkusio/tap/quarkus
+
+$ quarkus create app org.acme:javaland
+
+$ quarkus ext list --full
+
+$ quarkus build -DskipTests
+
+$ quarkus dev
+
+-- Hello World
+-- ConfigProperty
+-- AtomicInteger 
+---- with no instrumentation adding a blank
+restart
+---- quarkus.live-reload.instrumentation curls and then  adding -
+---- remove atomic & conf
+restart
+
+Continuous testing
+
+-- Fix test message
+-- continuous testing
+-- change property
+-- fix
+
+Dev Terminal
+
+-- Add logger (Debug)
+curl
+Enter DevTerminal
+
+help
+log tab --level=DEBUG --logger=org.acme
+
+Kubernetes
+
+quarkus ext add jib kubernetes 
+
+-- configure jib
+quarkus build -DskipTests -Dquarkus.container-image.push=true
+
+Panache
+
+quarkus ext add resteasy-jsonb hibernate-orm-panache mariadb smallrye-openapi
+
+-- Developer example (quarkus.hibernate-orm.database.generation=update)
+http://localhost:8080/q/swagger-ui/
+/q/dev 
+-- entities, pen
+
+quarkus ext add smallrye-health
+-- show, stop docker
+
+
+
+
